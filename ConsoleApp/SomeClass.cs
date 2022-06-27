@@ -12,7 +12,7 @@ namespace ConsoleApp
     public class SomeClass
     {
         //właściwość
-        public object SomeAutoProperty { get; private set; }
+        public object SomeAutoProperty { get; set; }
 
         
         //backfiled - pole z którego korzysta właściwość

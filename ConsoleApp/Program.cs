@@ -1,53 +1,13 @@
-﻿
-
-//deklaracja zmiennej
-string greetings;
-//inicjalizację zmiennej
-greetings = "Hello, World!";
-//przypisanie wartości
-greetings = "Hello, Paweł!";
-
-Console.WriteLine(greetings);
-
-//deklarację + inicjalizacja
-string question = "Jak się masz?";
-
-string message = greetings + " " + question;
-
-//message = string.Format("{0} {1}", greetings, question);
-
-//string interpolowany
-message = $"{greetings} {question}";
-
-Console.WriteLine(message);
+﻿//USING - deklaracja, że będziemy korzystać z klas wskazanej przestrzeni nazw
+using ConsoleApp;
 
 
-string userName = AskForData("Podaj imię:");
-string userAge = AskForData("Podaj wiek:");
-Console.WriteLine($"Info o użytkowniku: {userName} ({userAge})");
+StringDemo stringDemo = new StringDemo();
+stringDemo.Run();
 
-SayGoodbye(userName);
 
-//budowa metody
-//<typ zwracany> <nazwa metody>(<typ opcjonalnego parametru> <nazwa opcjonalnego parametru>)
-string AskForData(string message)
-{
-    Console.WriteLine(message);
-    string userInput = Console.ReadLine();
-    
-    //zwracamy rezultat z funkcji
-    return userInput;
-}
-//string AskForData()
-//{
-//    Console.WriteLine("Podaj imię:");
-//    string userInput = Console.ReadLine();
+Person person = new Person("Ewowska", "Ewa");
+Console.WriteLine($"{person.FirstName} {person.LastName}");
 
-//    return userInput;
-//}
-
-//void - funkcja nic nie zwraca
-void SayGoodbye(string name)
-{
-    Console.WriteLine($"Bye {name}!");
-}
+//person.FirstName = "Monika"; //nie możemy, bo setter jest prywatny
+person.LastName = "Monikowska";

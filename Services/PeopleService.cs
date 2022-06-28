@@ -10,7 +10,7 @@ namespace Services
     //klasa implementuje interfejs IPeopleService
     public class PeopleService : IPeopleService
     {
-        private ICollection<Person> people;
+        private IList<Person> people;
 
         public PeopleService()
         {
@@ -21,18 +21,30 @@ namespace Services
         public void Create()
         {
             var person = new Person();
-            person.FirstName  = GetData("Imię:");
-            person.LastName = GetData("Nazwisko:");
-            var ageString = GetData("Wiek:");
-            person.Age = int.Parse(ageString);
-        
+            EditPerson(person);
+
             person.Id = GenerateId();
 
             people.Add(person);
         }
 
+
         public void Delete(int id)
         {
+            //for( [1] ; [2][5]... ; [4][7].. )
+            //{
+            //   [3][6]..
+            //}
+            for (int i = 0; i < people.Count; i++ /*i = i+1*/)
+            {
+                //kolekcje indeksowane są od 0
+                var person = people[i];
+                if (person.Id == id)
+                {
+                    people.RemoveAt(i);
+                    break;
+                }
+            }
         }
 
         public IEnumerable<Person> GetPeople()
@@ -42,14 +54,20 @@ namespace Services
 
         public Person GetPerson(int id)
         {
+            foreach (var person in people)
+            {
+                if (person.Id == id)
+                    return person;
+            }
+
             return null;
         }
 
         public void Update(int id)
         {
+            var person = GetPerson(id);
+            EditPerson(person);
         }
-
-
 
         private int GenerateId()
         {
@@ -70,6 +88,13 @@ namespace Services
         {
             Console.WriteLine(label);
             return Console.ReadLine();
+        }
+        private void EditPerson(Person person)
+        {
+            person.FirstName = GetData("Imię:");
+            person.LastName = GetData("Nazwisko:");
+            var ageString = GetData("Wiek:");
+            person.Age = int.Parse(ageString);
         }
     }
 }

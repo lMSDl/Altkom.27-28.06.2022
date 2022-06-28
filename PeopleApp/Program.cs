@@ -53,7 +53,6 @@ do
     }
 } while (!exit);
 
-
 void ShowMenu()
 {
     Console.WriteLine("1. Dodaj");

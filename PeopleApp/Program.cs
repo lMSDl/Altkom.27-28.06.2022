@@ -29,27 +29,56 @@ do
     //instrukcja warunkowa if - else if - else
     //= - przypisanie
     //== - porównanie
-    if (input == "1")
+    //if (input == "1")
+    //{
+    //    peopleService.Create();
+    //}
+    //else if (input == "2")
+    //{
+    //    var id = AskForId();
+    //    peopleService.Update(id);
+    //}
+    //else if (input == "3")
+    //{
+    //    var id = AskForId();
+    //    peopleService.Delete(id);
+    //}
+    //else if(input == "4")
+    //{
+    //    exit = true;
+    //}
+    //else
+    //{
+    //    Console.WriteLine("Błędna opcja");
+    //}
+
+    //switch - przełącza nas do bloku kodu, którego case pasuje do parametry wejściowego (input)
+    switch (input)
     {
-        peopleService.Create();
-    }
-    else if (input == "2")
-    {
-        var id = AskForId();
-        peopleService.Update(id);
-    }
-    else if (input == "3")
-    {
-        var id = AskForId();
-        peopleService.Delete(id);
-    }
-    else if(input == "4")
-    {
-        exit = true;
-    }
-    else
-    {
-        Console.WriteLine("Błędna opcja");
+        case "1":
+        case "dodaj":
+        case "add":
+            peopleService.Create();
+            break;
+        case "2":
+            {
+            var id = AskForId();
+            peopleService.Update(id);
+            }
+            break;
+        case "3":
+            {
+            var id = AskForId();
+            peopleService.Delete(id);
+            }
+            break;
+        case "4":
+            exit = true;
+            break;
+            //default - wykonuje się gdy nie dopasowane case
+        default:
+            Console.WriteLine("Błędna opcja");
+            break;
     }
 } while (!exit);
 

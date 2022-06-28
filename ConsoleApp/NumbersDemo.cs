@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    internal class NumbersDemo
+    public class NumbersDemo
     {
 
         public void Run()

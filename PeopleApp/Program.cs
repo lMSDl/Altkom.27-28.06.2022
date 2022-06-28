@@ -65,6 +65,22 @@ int AskForId()
 {
     Console.WriteLine("Podaj id:");
     var input = Console.ReadLine();
-    var id = int.Parse(input);
-    return id;
+
+    try
+    {
+        //rzudanie wyjątku
+        //throw new Exception("Jakiś tam błąd");
+        var id = int.Parse(input);
+        return id;
+    }
+    catch (FormatException ex)
+    {
+        Console.WriteLine(ex.Message);
+        return AskForId();
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+        return 0;
+    }
 }

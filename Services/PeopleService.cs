@@ -66,7 +66,8 @@ namespace Services
         public void Update(int id)
         {
             var person = GetPerson(id);
-            EditPerson(person);
+            if (person != null)
+                EditPerson(person);
         }
 
         private int GenerateId()

@@ -3,7 +3,8 @@
 
 Shape shape = new Line(2);
 
-Console.WriteLine(shape.ToString());
+var output = Figgle.FiggleFonts.SubZero.Render(shape.ToString());
+Console.WriteLine(output);
 
 shape.AbstractMethod();
 

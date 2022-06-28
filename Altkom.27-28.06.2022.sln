@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{BB620093-0DDD-43BC-9F6E-573B910F55EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceApp", "InheritanceApp\InheritanceApp.csproj", "{5E78EC9A-F375-46EC-A852-40E2F106A78B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BB620093-0DDD-43BC-9F6E-573B910F55EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB620093-0DDD-43BC-9F6E-573B910F55EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB620093-0DDD-43BC-9F6E-573B910F55EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E78EC9A-F375-46EC-A852-40E2F106A78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E78EC9A-F375-46EC-A852-40E2F106A78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E78EC9A-F375-46EC-A852-40E2F106A78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E78EC9A-F375-46EC-A852-40E2F106A78B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

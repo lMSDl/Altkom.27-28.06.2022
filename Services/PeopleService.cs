@@ -94,8 +94,16 @@ namespace Services
         {
             person.FirstName = GetData("Imię:");
             person.LastName = GetData("Nazwisko:");
-            var ageString = GetData("Wiek:");
-            person.Age = int.Parse(ageString);
+
+            var success = false;
+            int age = 0;
+            while (!success)
+            {
+                var ageString = GetData("Wiek:");
+                //metoda zwraca 2 rezultaty. Pierwszy poprzez return, a drugi przez parametr wyjściowy (out)
+                success = int.TryParse(ageString, out age);
+            }
+            person.Age = age;
         }
     }
 }

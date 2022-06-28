@@ -85,7 +85,7 @@ namespace Services
             return id + 1;
         }
 
-        private string GetData(string label)
+        public static string GetData(string label)
         {
             Console.WriteLine(label);
             return Console.ReadLine();

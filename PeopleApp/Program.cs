@@ -24,7 +24,7 @@ do
     }
 
     ShowMenu();
-    var input = Console.ReadLine();
+    var input = PeopleService.GetData("Wybierz co chcesz zrobić:");
 
     //instrukcja warunkowa if - else if - else
     //= - przypisanie

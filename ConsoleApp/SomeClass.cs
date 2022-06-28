@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 //przestrzeń nazw - jest to pewnego rodzaju adres pod którym mieszkają klasy
-namespace ConsoleApp
+namespace ConsoleApp.Demo
 {
     //KLASA - opisuje zachowania i właściwości obiektów (instancji klas), które na jej podstawie są wytwarzane
     //Pełna nazwa klasy to namespace + nazwa klasy

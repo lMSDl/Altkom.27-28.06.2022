@@ -1,6 +1,5 @@
 ﻿//USING - deklaracja, że będziemy korzystać z klas wskazanej przestrzeni nazw
 using ConsoleApp;
-using System;
 
 NumbersDemo numbersDemo = new NumbersDemo();
 //numbersDemo.Run();
